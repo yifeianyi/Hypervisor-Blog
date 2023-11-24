@@ -5,11 +5,9 @@
 - arceos/makefile
 - arceos/scripts/make/qemu.mk
 
-
-
 ## arceos/makefile
 
-只关注riscv-v HY=y部分
+只关注riscv-v HY=y部分，其他部分省略。
 
 ```makefile
 # Arguments
@@ -47,7 +45,7 @@ justrun:
 
 ```
 
-
+简单来说，这里就配置了下启动
 
 
 
@@ -91,13 +89,7 @@ endef
 
 guest Linux 以外设挂载的形式，放入qemu中。
 
----
 
-
-
-```
-qemu-system-riscv64 -kernel ../apps/hv/guest/linux/linux.bin -dtb linux.dtb -initrd ../apps/hv/guest/linux/rootfs.img -append "root=/dev/ram console=ttyS0" -nographic -smp 2
-```
 
 
 
